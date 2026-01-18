@@ -1,0 +1,220 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{newunicodechar}
+
+% Farben
+\definecolor{darkblue}{RGB}{0,47,108}
+\definecolor{lightgray}{RGB}{100,100,100}
+
+% Font
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Unicode-Pfeil definieren
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+
+% Hyperref Setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    pdfauthor={Keanu Fuchs},
+    pdftitle={Lebenslauf Keanu Fuchs}
+}
+
+% Section Formatting
+\titleformat{\section}
+    {\Large\bfseries\color{darkblue}}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Custom Commands
+\newcommand{\cventry}[5]{
+    \noindent
+    \begin{minipage}[t]{0.75\textwidth}
+        \textbf{#1}\\
+        \textit{#2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.23\textwidth}
+        \raggedleft\textcolor{lightgray}{#3}
+    \end{minipage}
+    \par\vspace{2pt}
+    \noindent\textcolor{lightgray}{#4}
+    \par\vspace{4pt}
+    #5
+    \par\vspace{8pt}
+}
+
+\newcommand{\cveducation}[4]{
+    \noindent
+    \begin{minipage}[t]{0.75\textwidth}
+        \textbf{#1}\\
+        \textit{#2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.23\textwidth}
+        \raggedleft\textcolor{lightgray}{#3}
+    \end{minipage}
+    \par\vspace{2pt}
+    #4
+    \par\vspace{8pt}
+}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\small\textcolor{lightgray}{18. Januar 2026}}
+\fancyfoot[C]{\small\textcolor{lightgray}{Keanu Fuchs}}
+\fancyfoot[R]{\small\textcolor{lightgray}{\thepage}}
+
+% List Settings
+\setlist[itemize]{leftmargin=*,topsep=0pt,itemsep=2pt,parsep=0pt}
+
+% Document
+\begin{document}
+
+% Disable page numbering for first page header
+\thispagestyle{empty}
+
+% Header
+\noindent
+\begin{minipage}[t]{0.65\textwidth}
+    {\Huge\bfseries\color{darkblue}Keanu Fuchs}\\[4pt]
+    {\Large\color{lightgray}System Engineer | Network Automation}\\[10pt]
+    \textcolor{lightgray}{
+        Schlesienstraße 5, 53119 Bonn\\
+        \href{tel:+491746352391}{+49 174 6352391} | \href{mailto:kn.fchs@gmail.com}{kn.fchs@gmail.com}\\
+        \href{https://linkedin.com/in/keanufuchs}{linkedin.com/in/keanufuchs} \\
+        \href{https://github.com/keanufuchs}{github.com/keanufuchs} | \href{https://blog.spelk.de}{blog.spelk.de (Tech-Blog)}
+    }
+\end{minipage}
+\hfill
+
+\vspace{20pt}
+
+% Enable fancy page style for subsequent pages
+\pagestyle{fancy}
+
+% Profil
+\section*{Profil}
+System Engineer und Dualer Student mit Fokus auf Netzwerkautomatisierung (Cisco) und Softwareentwicklung. Spezialisiert auf skalierbare Provisionierung (Day-0/Day-N) mittels Python, sowie die Integration moderner KI-Ansätze (LLM/RAG) in Network-Operations. Nachgewiesene Erfahrung in der technischen Leitung von Enterprise-Rollouts sowie der Entwicklung eigener Automatisierungstools im CI/CD-Kontext.
+\vspace{10pt}
+
+% Kompetenzen
+\section*{Kompetenzen}
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{2em}}X@{}}
+    \textbf{Network Automation} & \textbf{APIs \& Protokolle}\\
+    Cisco Catalyst Center, Plug \& Play, Day-0/Day-N, Templates (Jinja2), InfraHub (SSoT) & REST APIs, NETCONF/YANG, Cisco APIs (Catalyst Center, FMC, Meraki)\\[8pt]
+    
+    \textbf{Cisco Networking} & \textbf{Automation \& Testing}\\
+    Catalyst Switching, Enterprise Rollouts, Troubleshooting, Meraki, Firepower & Python, PyATS, Ansible, Paramiko, Flask, Pydantic\\[8pt]
+    
+    \textbf{DevOps \& Development} & \textbf{Data Handling}\\
+    Git, GitLab CI/CD, Docker, GitLab Runner, Vue.js, Nuxt & Excel-Validierung, YAML/JSON Transformation, Terraform Integration\\
+\end{tabularx}
+
+\vspace{10pt}
+
+% Berufserfahrung
+\section*{Berufserfahrung}
+
+\cventry{Dualer Student Informatik (B.Sc.) \& System Engineer}{Bechtle IT-Systemhaus Bonn/Köln, Bonn}{Sep. 2023 – heute}{}{
+\begin{itemize}
+    \item Netzwerkautomatisierung im Cisco-Enterprise-Umfeld (Catalyst Center, Python, REST, NETCONF/YANG)
+    \item Automatisierung von Provisionierung \& Lifecycle-Prozessen (Day-0/Day-N)
+    \item API-basierte Integrationen \& Tools im Bereich Switching und Security
+    \item CI/CD-basierte Umsetzung über GitLab Pipelines inkl. Docker-Containerisierung
+\end{itemize}
+\textbf{Projekt-Highlights (anonymisiert):}
+\begin{itemize}
+    \item Enterprise Rollout (2023–2024): 11 Logistikzentren + 8 Büro-/Kleinstandorte, 10–30 Devices/Standort, technischer Lead
+    \item Industrie-Rollouts (2024–heute): 5 Standorte, Blueprints/Standards, eigenverantwortlich
+    \item Catalyst Center API Extensions (Feb.–Sep. 2024): Python REST API
+    \item Automatisierte Datenmigration \& Validierung (Excel zu YAML) (Sep.–Okt. 2024): Python/Pandas
+    \item Firewall Automation Cisco FMC API (Jan. 2025): Python REST API
+    \item Cisco Catalyst Center PnP-Emulation Tool (Mär.–Jun. 2025): Vue.js/Nuxt, Python Flask, Ansible
+    \item Confluence → Pydantic → Terraform Pipeline (Jul.–Okt. 2025): Python/Pydantic
+    \item Hardening \& Compliance Automation (Nov. 2025–heute): NETCONF/YANG, PyATS
+\end{itemize}
+}
+
+\cventry{Junior System Engineer}{Bechtle IT-Systemhaus Bonn/Köln, Bonn}{Jun. 2023 – Sep. 2023}{}{
+\begin{itemize}
+    \item Verantwortung im Cisco Catalyst Center für Provisionierung \& Lifecycle-Prozesse
+    \item Plug-and-Play Rollouts sowie Day-0/Day-N Automatisierung (Templates/Jinja2)
+    \item Unterstützung bei Standardisierung, Umsetzung und Troubleshooting
+\end{itemize}
+}
+
+\cventry{Fachinformatiker für Systemintegration (Ausbildung)}{Bechtle IT-Systemhaus Bonn/Köln, Bonn}{Sep. 2021 – Jun. 2023}{}{
+\begin{itemize}
+    \item Schwerpunkt Cisco Networking inkl. Lifecycle-Prozesse
+    \item Mitarbeit in Enterprise-Netzwerkumgebungen
+    \item \textbf{Abschlussprojekt:} Automatisierter Geräteaustausch \& Provisionierung über Cisco Catalyst Center
+\end{itemize}
+}
+
+% Ausbildung
+\section*{Ausbildung}
+
+\cveducation{Bachelor of Science (B.Sc.) Informatik (dual)}{Rheinische Hochschule Köln}{Sep. 2023 – Jul. 2026}{
+\begin{itemize}
+    \item Schwerpunkt: AI Solution Development und Network Automation
+    
+    % ÄNDERUNG: Bachelorarbeit visuell hervorgehoben durch \vspace und Fettdruck
+    \item[] \vspace{2pt} \textbf{Bachelorarbeit (in Arbeit):} \\
+    \textit{„Von natürlicher Sprache zu Netzwerk-Konfigurationen: Ein LLM-gestütztes Intent-Based Networking-System mit MCP-basierter Single Source of Truth“}
+    
+    % Kurze Erklärung der Tech-Stack macht es greifbarer:
+    \item[] \footnotesize{\textcolor{darkblue}{\textbf{Tech Stack:}} Python, LangChain, InfraHub (SSoT), Ollama/OpenAI API. Entwicklung eines Agenten, der Netzwerkinfrastruktur basierend auf natürlicher Sprache provisioniert.}
+\end{itemize}
+}
+
+\cveducation{Fachinformatiker für Systemintegration (IHK)}{Heinrich-Hertz-Europakolleg Bonn}{Sep. 2021 – Jun. 2023}{
+\begin{itemize}
+    \item Ausbildung mit Schwerpunkt Netzwerktechnik und Cisco-Systeme
+\end{itemize}
+}
+
+\cveducation{Allgemeine Hochschulreife (Abitur)}{Städtisches Gymnasium Rheinbach}{Aug. 2013 – Jun. 2021}{
+}
+
+% Zertifikate
+\section*{Zertifikate}
+\noindent
+\textbf{Cisco CCNA (Cisco Certified Network Associate)} \hfill \textcolor{lightgray}{Feb. 2024 – Feb. 2027}
+
+\vspace{10pt}
+
+% Sprachen
+\section*{Sprachen}
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{2em}}X@{}}
+    \textbf{Deutsch:} Muttersprache & \textbf{Englisch:} Sehr gut (Wort und Schrift)\\[4pt]
+    \textbf{Französisch:} Grundkenntnisse & \\
+\end{tabularx}
+
+\vspace{10pt}
+
+% Interessen & Private Projekte
+\section*{Interessen \& Private Projekte}
+\textbf{Tech-Blog \& HomeLab (blog.spelk.de):} Dokumentation technischer Lösungen (z.B. Cisco Catalyst Checklisten, Hardware-Recovery) sowie Server-Architekturing (On-Demand Proxy-Scaling mit Velocity/Limbo).\\
+\textbf{Sonstiges:} Fitness (seit 2019), Fußball (FC Hertha Bonn, 5 Jahre), Waldhorn (Musikschule Bonn, 3 Jahre)
+
+\end{document}
