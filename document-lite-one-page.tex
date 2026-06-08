@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{newunicodechar}
+
+% Farben
+\definecolor{darkblue}{RGB}{0,47,108}
+\definecolor{lightgray}{RGB}{100,100,100}
+
+% Font
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Hyperref Setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    pdfauthor={Keanu Fuchs},
+    pdftitle={Lebenslauf Keanu Fuchs}
+}
+
+% Section Formatting
+\titleformat{\section}
+    {\large\bfseries\color{darkblue}}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Custom Commands
+\newcommand{\cventry}[3]{
+    \noindent
+    \begin{minipage}[t]{0.75\textwidth}
+        \textbf{#1}\\
+        \textit{\small #2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.23\textwidth}
+        \raggedleft\textcolor{lightgray}{\small #3}
+    \end{minipage}
+    \par\vspace{6pt}
+}
+
+\newcommand{\cveducation}[3]{
+    \noindent
+    \begin{minipage}[t]{0.75\textwidth}
+        \textbf{#1}\\
+        \textit{\small #2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.23\textwidth}
+        \raggedleft\textcolor{lightgray}{\small #3}
+    \end{minipage}
+    \par\vspace{6pt}
+}
+
+% List Settings
+\setlist[itemize]{leftmargin=*,topsep=0pt,itemsep=1pt,parsep=0pt}
+
+% Document
+\begin{document}
+\pagestyle{empty}
+
+% Header
+\noindent
+\begin{minipage}[t]{0.65\textwidth}
+    {\huge\bfseries\color{darkblue}Keanu Fuchs}\\[2pt]
+    {\large\color{lightgray}System Engineer | Network Automation}\\[6pt]
+    \textcolor{lightgray}{
+        Schlesienstraße 5, 53119 Bonn\\
+        \href{tel:+491746352391}{+49 174 6352391} | \href{mailto:kn.fchs@gmail.com}{kn.fchs@gmail.com}\\
+        \href{https://linkedin.com/in/keanufuchs}{linkedin.com/in/keanufuchs} |
+        \href{https://github.com/keanufuchs}{github.com/keanufuchs}
+    }
+\end{minipage}
+
+\vspace{10pt}
+
+% Profil
+\section*{Profil}
+System Engineer und Dualer Student mit Fokus auf Netzwerkautomatisierung (Cisco) und Softwareentwicklung. Spezialisiert auf skalierbare Provisionierung mittels Python sowie die Integration moderner KI-Ansätze in Network Operations.
+
+\vspace{4pt}
+
+% Kompetenzen
+\section*{Kompetenzen}
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{2em}}X@{\hspace{2em}}X@{}}
+    \textbf{Network Automation} & \textbf{Development} & \textbf{APIs \& Protokolle}\\
+    Cisco Catalyst Center, PnP, & Python, Ansible, Flask, & REST, NETCONF/YANG,\\
+    Day-0/Day-N, Jinja2 & PyATS, Git, GitLab CI/CD & Cisco APIs, Meraki\\
+\end{tabularx}
+
+\vspace{4pt}
+
+% Berufserfahrung
+\section*{Berufserfahrung}
+
+\cventry{Dualer Student Informatik (B.Sc.) \& System Engineer}{Bechtle IT-Systemhaus Bonn/Köln}{Sep. 2023 – heute}
+\begin{itemize}
+    \item Netzwerkautomatisierung im Cisco-Enterprise-Umfeld (Catalyst Center, Python, REST, NETCONF/YANG)
+    \item Automatisierung von Provisionierung \& Lifecycle-Prozessen (Day-0/Day-N)
+    \item API-Integrationen, CI/CD-Pipelines (GitLab) und Docker-Containerisierung
+    \item Technischer Lead bei Enterprise-Rollouts (Logistik- und Industriestandorte)
+\end{itemize}
+\vspace{4pt}
+
+\cventry{Junior System Engineer}{Bechtle IT-Systemhaus Bonn/Köln}{Jun. 2023 – Sep. 2023}
+\begin{itemize}
+    \item Cisco Catalyst Center: Provisionierung, Plug-and-Play, Day-0/Day-N Templates (Jinja2)
+\end{itemize}
+\vspace{4pt}
+
+\cventry{Fachinformatiker für Systemintegration (Ausbildung)}{Bechtle IT-Systemhaus Bonn/Köln}{Sep. 2021 – Jun. 2023}
+\begin{itemize}
+    \item Cisco Networking, Enterprise-Netzwerkumgebungen, Abschlussprojekt: Automatisierter Geräteaustausch über Catalyst Center
+\end{itemize}
+
+\vspace{4pt}
+
+% Ausbildung
+\section*{Ausbildung}
+
+\cveducation{B.Sc. Informatik (dual) – Schwerpunkt AI \& Network Automation}{Rheinische Hochschule Köln}{Sep. 2023 – heute}
+\cveducation{Fachinformatiker für Systemintegration (IHK)}{Heinrich-Hertz-Europakolleg Bonn}{Sep. 2021 – Jun. 2023}
+\cveducation{Allgemeine Hochschulreife (Abitur)}{Städtisches Gymnasium Rheinbach}{Jun. 2021}
+
+\vspace{4pt}
+
+% Zertifikate & Sprachen
+\section*{Zertifikate \& Sprachen}
+\noindent
+\textbf{Cisco CCNA} \hfill \textcolor{lightgray}{\small Feb. 2024 – Feb. 2027}\\[4pt]
+\textbf{Deutsch:} Muttersprache \quad \textbf{Englisch:} Sehr gut \quad \textbf{Französisch:} Grundkenntnisse
+
+\end{document}

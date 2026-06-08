@@ -21,9 +21,6 @@
 \setsansfont{Helvetica Neue}
 \renewcommand{\familydefault}{\sfdefault}
 
-% Unicode-Pfeil definieren
-\newunicodechar{→}{\ensuremath{\rightarrow}}
-
 % Hyperref Setup
 \hypersetup{
     colorlinks=true,
@@ -80,7 +77,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\fancyfoot[L]{\small\textcolor{lightgray}{18. Januar 2026}}
+\fancyfoot[L]{\small\textcolor{lightgray}{Juni 2026}}
 \fancyfoot[C]{\small\textcolor{lightgray}{Keanu Fuchs}}
 \fancyfoot[R]{\small\textcolor{lightgray}{\thepage}}
 
@@ -90,7 +87,6 @@
 % Document
 \begin{document}
 
-% Disable page numbering for first page header
 \thispagestyle{empty}
 
 % Header
@@ -102,32 +98,27 @@
         Schlesienstraße 5, 53119 Bonn\\
         \href{tel:+491746352391}{+49 174 6352391} | \href{mailto:kn.fchs@gmail.com}{kn.fchs@gmail.com}\\
         \href{https://linkedin.com/in/keanufuchs}{linkedin.com/in/keanufuchs} \\
-        \href{https://github.com/keanufuchs}{github.com/keanufuchs} | \href{https://blog.spelk.de}{blog.spelk.de (Tech-Blog)}
+        \href{https://github.com/keanufuchs}{github.com/keanufuchs} | \href{https://blog.spelk.de}{blog.spelk.de}
     }
 \end{minipage}
-\hfill
 
 \vspace{20pt}
 
-% Enable fancy page style for subsequent pages
 \pagestyle{fancy}
 
 % Profil
 \section*{Profil}
-System Engineer und Dualer Student mit Fokus auf Netzwerkautomatisierung (Cisco) und Softwareentwicklung. Spezialisiert auf skalierbare Provisionierung (Day-0/Day-N) mittels Python, sowie die Integration moderner KI-Ansätze (LLM/RAG) in Network-Operations. Nachgewiesene Erfahrung in der technischen Leitung von Enterprise-Rollouts sowie der Entwicklung eigener Automatisierungstools im CI/CD-Kontext.
+System Engineer und Dualer Student mit Fokus auf Netzwerkautomatisierung (Cisco) und Softwareentwicklung. Spezialisiert auf skalierbare Provisionierung (Day-0/Day-N) mittels Python sowie die Integration moderner KI-Ansätze in Network-Operations. Erfahrung in der technischen Leitung von Enterprise-Rollouts und der Entwicklung eigener Automatisierungstools.
 \vspace{10pt}
 
 % Kompetenzen
 \section*{Kompetenzen}
 \begin{tabularx}{\textwidth}{@{}X@{\hspace{2em}}X@{}}
-    \textbf{Network Automation} & \textbf{APIs \& Protokolle}\\
-    Cisco Catalyst Center, Plug \& Play, Day-0/Day-N, Templates (Jinja2), InfraHub (SSoT) & REST APIs, NETCONF/YANG, Cisco APIs (Catalyst Center, FMC, Meraki)\\[8pt]
-    
-    \textbf{Cisco Networking} & \textbf{Automation \& Testing}\\
-    Catalyst Switching, Enterprise Rollouts, Troubleshooting, Meraki, Firepower & Python, PyATS, Ansible, Paramiko, Flask, Pydantic\\[8pt]
-    
-    \textbf{DevOps \& Development} & \textbf{Data Handling}\\
-    Git, GitLab CI/CD, Docker, GitLab Runner, Vue.js, Nuxt & Excel-Validierung, YAML/JSON Transformation, Terraform Integration\\
+    \textbf{Network Automation} & \textbf{Development \& APIs}\\
+    Cisco Catalyst Center, Plug \& Play, Day-0/Day-N, Jinja2 & Python, REST APIs, NETCONF/YANG, Ansible, PyATS\\[8pt]
+
+    \textbf{DevOps} & \textbf{Cisco Networking}\\
+    Git, GitLab CI/CD, Docker & Catalyst Switching, Meraki, Firepower, Troubleshooting\\
 \end{tabularx}
 
 \vspace{10pt}
@@ -139,27 +130,18 @@ System Engineer und Dualer Student mit Fokus auf Netzwerkautomatisierung (Cisco)
 \begin{itemize}
     \item Netzwerkautomatisierung im Cisco-Enterprise-Umfeld (Catalyst Center, Python, REST, NETCONF/YANG)
     \item Automatisierung von Provisionierung \& Lifecycle-Prozessen (Day-0/Day-N)
-    \item API-basierte Integrationen \& Tools im Bereich Switching und Security
+    \item API-basierte Integrationen im Bereich Switching und Security (FMC, Meraki)
     \item CI/CD-basierte Umsetzung über GitLab Pipelines inkl. Docker-Containerisierung
-\end{itemize}
-\textbf{Projekt-Highlights (anonymisiert):}
-\begin{itemize}
-    \item Enterprise Rollout (2023–2024): 11 Logistikzentren + 8 Büro-/Kleinstandorte, 10–30 Devices/Standort, technischer Lead
-    \item Industrie-Rollouts (2024–heute): 5 Standorte, Blueprints/Standards, eigenverantwortlich
-    \item Catalyst Center API Extensions (Feb.–Sep. 2024): Python REST API
-    \item Automatisierte Datenmigration \& Validierung (Excel zu YAML) (Sep.–Okt. 2024): Python/Pandas
-    \item Firewall Automation Cisco FMC API (Jan. 2025): Python REST API
-    \item Cisco Catalyst Center PnP-Emulation Tool (Mär.–Jun. 2025): Vue.js/Nuxt, Python Flask, Ansible
-    \item Confluence → Pydantic → Terraform Pipeline (Jul.–Okt. 2025): Python/Pydantic
-    \item Hardening \& Compliance Automation (Nov. 2025–heute): NETCONF/YANG, PyATS
+    \item Technischer Lead bei Enterprise-Rollouts (Logistik- und Industriestandorte)
+    \item Entwicklung von Automatisierungstools: PnP-Emulation, Datenmigration, Compliance Automation
 \end{itemize}
 }
 
 \cventry{Junior System Engineer}{Bechtle IT-Systemhaus Bonn/Köln, Bonn}{Jun. 2023 – Sep. 2023}{}{
 \begin{itemize}
-    \item Verantwortung im Cisco Catalyst Center für Provisionierung \& Lifecycle-Prozesse
+    \item Cisco Catalyst Center: Provisionierung \& Lifecycle-Prozesse im Enterprise-Umfeld
     \item Plug-and-Play Rollouts sowie Day-0/Day-N Automatisierung (Templates/Jinja2)
-    \item Unterstützung bei Standardisierung, Umsetzung und Troubleshooting
+    \item Standardisierung, Umsetzung und Troubleshooting
 \end{itemize}
 }
 
@@ -177,13 +159,7 @@ System Engineer und Dualer Student mit Fokus auf Netzwerkautomatisierung (Cisco)
 \cveducation{Bachelor of Science (B.Sc.) Informatik (dual)}{Rheinische Hochschule Köln}{Sep. 2023 – heute}{
 \begin{itemize}
     \item Schwerpunkt: AI Solution Development und Network Automation
-    
-    % ÄNDERUNG: Bachelorarbeit visuell hervorgehoben durch \vspace und Fettdruck
-    \item[] \vspace{2pt} \textbf{Bachelorarbeit (in Arbeit):} \\
-    \textit{„Von natürlicher Sprache zu Netzwerk-Konfigurationen: Ein LLM-gestütztes Intent-Based Networking-System mit MCP-basierter Single Source of Truth“}
-    
-    % Kurze Erklärung der Tech-Stack macht es greifbarer:
-    \item[] \footnotesize{\textcolor{darkblue}{\textbf{Tech Stack:}} Python, LangChain, InfraHub (SSoT), Ollama/OpenAI API. Entwicklung eines Agenten, der Netzwerkinfrastruktur basierend auf natürlicher Sprache provisioniert.}
+    \item \textbf{Bachelorarbeit (in Arbeit):} LLM-gestütztes Intent-Based Networking-System mit MCP-basierter Single Source of Truth
 \end{itemize}
 }
 
@@ -212,9 +188,9 @@ System Engineer und Dualer Student mit Fokus auf Netzwerkautomatisierung (Cisco)
 
 \vspace{10pt}
 
-% Interessen & Private Projekte
-\section*{Interessen \& Private Projekte}
-\textbf{Tech-Blog \& HomeLab (blog.spelk.de):} Dokumentation technischer Lösungen (z.B. Cisco Catalyst Checklisten, Hardware-Recovery) sowie Server-Architekturing (On-Demand Proxy-Scaling mit Velocity/Limbo).\\
-\textbf{Sonstiges:} Fitness (seit 2019), Fußball (FC Hertha Bonn, 5 Jahre), Waldhorn (Musikschule Bonn, 3 Jahre)
+% Interessen
+\section*{Interessen}
+\textbf{Tech-Blog \& HomeLab (blog.spelk.de):} Dokumentation technischer Lösungen und Server-Architekturing.\\
+\textbf{Sonstiges:} Fitness (seit 2019), Fußball (FC Hertha Bonn), Waldhorn (Musikschule Bonn)
 
 \end{document}
